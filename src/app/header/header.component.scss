@@ -1,5 +1,5 @@
 nav {
-  background: var(--bs-primary);
+  background: var(--primary);
   color: white;
   .logo {
     font-size: 18px;
@@ -15,7 +15,7 @@ ul {
     margin-right: 10px;
     cursor: pointer;
     &:hover {
-      background-color: var(--bs-secondary);
+      background-color: var(--secondary);
     }
     transition: background-color 0.4s;
   }

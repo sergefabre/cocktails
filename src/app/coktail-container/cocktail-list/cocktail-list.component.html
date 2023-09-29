@@ -1,10 +1,9 @@
-<h3 class="mb-2">Liste des cocktails</h3>
-<!-- color="red" [appSelected]="cocktail.name === selectedCocktail.name"-->
-<ul class="mb-2 list-primary">
+<h3 class="mb-20">Liste des cocktails</h3>
+<ul class="mb-20 list-primary">
   <li
-    [appSelected]="cocktail.name === selectedCocktail.name"
+    [routerLink]="[index]"
+    routerLinkActive="active"
     *ngFor="let cocktail of cocktails; let index = index"
-    (click)="selectCocktail(index)"
   >
     {{ cocktail.name }}
   </li>

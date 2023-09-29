@@ -37,12 +37,16 @@ export class CocktailService {
       ],
     },
   ]);
-  public selectedCocktail$: BehaviorSubject<Cocktail> = new BehaviorSubject(
-    this.cocktails$.value[0]
-  );
+  // public selectedCocktail$: BehaviorSubject<Cocktail> = new BehaviorSubject(
+  //   this.cocktails$.value[0]
+  // );
 
-  constructor() {}
-  public selectCocktail(ind: number) {
-    this.selectedCocktail$.next(this.cocktails$.value.at(ind)!);
+  // constructor() {}
+  // public selectCocktail(ind: number) {
+  //   this.selectedCocktail$.next(this.cocktails$.value.at(ind)!);
+  // }
+  public getCocktail(index: number) {
+    const cocktails = this.cocktails$.value;
+    return cocktails[index];
   }
 }
