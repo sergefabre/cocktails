@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+// Dubug
+.d1 {
+  border: 1px solid red;
+}
+
+.d2 {
+  border: 1px solid green;
+}
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+ul {
+  list-style: none;
+}
+img {
+  max-width: 300px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex-50 {
+  flex: 1 1 50%;
+}
+// :root {
+//   --font-family: "Roboto", sans-serif;
+//   --primary: #546de5;
+//   --secondary: #778beb;
+//   --accent: #e5546d;
+//   --lightgray: #ddd;
+//   --text-regular: #444;
+// }
+.container {
+  margin: auto;
+  padding: 20px;
+}
+.active {
+  background-color: var(--bs-secondary);
+}
+.list-primary-action {
+  li {
+    &:hover {
+      background-color: var(--bs-primary);
+      color: white;
+      cursor: pointer;
+    }
+    transition: background-color 0.4s;
+  }
+}
+// theme
+.list-primary {
+  li {
+    padding: 10px 15px;
+    border: 1px solid var(--bs-gray);
+    border-top: 0;
+    &:hover {
+      background-color: var(--bs-primary);
+      color: white;
+      cursor: pointer;
+    }
+    transition: all 0.4s;
+  }
+  li:first-child {
+    border-top: 1px solid var(--bs-gray);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
