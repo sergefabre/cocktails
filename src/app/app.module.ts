@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { CoktailContainerComponent } from './coktail-container/coktail-container.component';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
 import { IngredientListComponent } from './panier-container/ingredient-list/ingredient-list.component';
+import { CocktailFormComponent } from './coktail-container/cocktail-form/cocktail-form.component';
 
 // Directives
 import { ColorDirective } from 'src/core/directives/color.directive';
@@ -20,6 +21,7 @@ const COMPONENTS = [
   HeaderComponent,
   PanierContainerComponent,
   IngredientListComponent,
+  CocktailFormComponent,
 ];
 const DIRECTIVES = [ColorDirective];
 @NgModule({

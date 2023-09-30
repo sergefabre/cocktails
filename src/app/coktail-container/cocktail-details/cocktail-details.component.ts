@@ -3,22 +3,26 @@ import { Cocktail } from '../../shared/interfaces/cocktail.interface';
 import { CocktailService } from 'src/app/shared/services/cocktail.service';
 import { CommonModule } from '@angular/common';
 import { PanierService } from 'src/app/shared/services/panier.service';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cocktail-details',
   templateUrl: './cocktail-details.component.html',
   styleUrls: ['./cocktail-details.component.scss'],
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 })
 export class CocktailDetailsComponent implements OnInit {
-  public cocktail!: Cocktail;
+  public cocktail: Cocktail;
   constructor(
     private panierService: PanierService,
     private cocktailService: CocktailService,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) {
+    this.cocktail = this.cocktailService.getCocktail(
+      +this.activatedRoute.snapshot.paramMap.get('index')!
+    );
+  }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {

@@ -12,5 +12,5 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, ColorDirective, RouterModule],
 })
 export class CocktailListComponent {
-  @Input() public cocktails: Cocktail[] = [];
+  @Input() public cocktails?: Cocktail[];
 }
